@@ -31,9 +31,9 @@ function Exp() {
       {/* Parent Div */}
       <div className="">
         {companies.map((elem, ind) => (
-          <>
+          <div key={ind}>
             {/* Card */}
-            <div className="text-white flex flex-col gap-3 md:gap-7">
+            <div className="text-white flex flex-col gap-3 md:gap-7" key={ind}>
               {/* top level */}
               <div className="flex justify-between">
                 {/* parent top */}
@@ -64,6 +64,7 @@ function Exp() {
               {elem.tech.map((logo, ind) => (
                 <div key={ind}>
                   <img
+                  
                     src={logo}
                     alt=""
                     className={`w-4 h-4 md:w-6 md:h-6 transition duration-300 hover:scale-110 
@@ -73,7 +74,7 @@ function Exp() {
               ))}
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

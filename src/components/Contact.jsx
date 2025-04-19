@@ -6,7 +6,7 @@ function Contact({ showContact, setShowContact }) {
  const [Message, setMessage] = useState("");
 
  const submit = async () => {
-    const response = await fetch("http://localhost:3000/contact", {
+    const response = await fetch("https://manpreetx-production.up.railway.app/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
